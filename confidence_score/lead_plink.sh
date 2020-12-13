@@ -23,5 +23,3 @@ $plink --vcf $file --clump $gwas_file --clump-snp-field variant_id --clump-field
 $plink --vcf $file --clump $gwas_file --clump-snp-field variant_id --clump-field p_value --clump-p1 0.00000005 clump-r2 0 clump-kb 500 --out $file.dist.based
 
 
-
-
