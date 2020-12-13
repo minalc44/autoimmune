@@ -7,7 +7,6 @@ Download gencode gtf file: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_hum
 
 ```
 python parse.gencode.py -i gencode.v36lift37.annotation.gtf.gz -o gencodeTSS.grch37.txt
-
 ```
 
 
@@ -17,7 +16,6 @@ make sure tabix, vcftools, plink2 are installed in your environment
 
 ```
 bash lead_plink.sh /path/to/vcftools ALL.chr20.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz /path/to/EUR.ids.txt /path/to/plink2 /path/to/gwas.txt
-
 ```
 
 
