@@ -24,7 +24,7 @@ Rscript --vanilla 1000genoms_ids.R /path/to/20130606_g1k.ped
 
 
 ### Extract 1000 Genomes haplotypes and allele frequencies
-make sure tabix, vcftools, plink2 are installed in your environment
+make sure tabix, vcftools, plink2 are installed in your environment\
 1000 Genomes datasets can be found at ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/
 
 ```
