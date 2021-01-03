@@ -43,7 +43,7 @@ for (i in 1:length(oddsratio)){
 		for (k in 1:1000){
 			pexp <- psim[k,]
 			abfm <- coloc:::approx.bf.p(p=pexp, f=af$MAF, type="cc", N=ssize*2, s=0.5)
-            abfm$snp=snps
+			abfm$snp=snps
 			abfm$ABF <- 10^(abfm$lABF)
 			ABFsum <- sum(abfm$ABF)
 			abfm$PPi <- abfm$ABF/ABFsum
