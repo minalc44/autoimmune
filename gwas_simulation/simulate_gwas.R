@@ -29,7 +29,7 @@ af$MAF[ch] <- 1-af$MAF[ch]
 #Simulate GWAS Summary Statistics
 CV <- snp
 oddsratio <- c(1.1,1.2,1.3)
-size <- c(5000,10000,15000,20000,25000)
+size <- c(5000,25000)
 
 result <- matrix(NA)
 for (i in 1:length(oddsratio)){
@@ -43,6 +43,7 @@ for (i in 1:length(oddsratio)){
 		for (k in 1:1000){
 			pexp <- psim[k,]
 			abfm <- coloc:::approx.bf.p(p=pexp, f=af$MAF, type="cc", N=ssize*2, s=0.5)
+            abfm$snp=snps
 			abfm$ABF <- 10^(abfm$lABF)
 			ABFsum <- sum(abfm$ABF)
 			abfm$PPi <- abfm$ABF/ABFsum
@@ -54,7 +55,8 @@ for (i in 1:length(oddsratio)){
 				abfm$PPi_sum[o] = PPi_sum
 				}
 				cr95 = abfm[1:min(which(abfm[,"PPi_sum"] >= 0.95)), ]
-				simabf = paste(g1,2*ssize,nrow(cr95),k)
+				cmin = CV==snps[which(pexp==min(pexp))]
+				simabf = paste(g1,2*ssize,nrow(cr95),cmin,k)
 				result = rbind(result,simabf)
 				}
 				}	

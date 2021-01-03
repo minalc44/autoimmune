@@ -11,7 +11,7 @@ ld_file="$8"
 
 
 #Download locus of interest from the 1000 Genomes ftp site
-$tabix -h $vcf_file 1:172837910-172937910  > 1000Genomes.vcf
+$tabix -h $vcf_file 1:172807050-172907050  > 1000Genomes.vcf
 
 #Extract subset of individuals/ancestries, common, bi-allelic variants
 $vcftools --vcf 1000Genomes.vcf --keep $id_list --maf 0.01 --max-alleles 2 --recode --out 1000Genomes

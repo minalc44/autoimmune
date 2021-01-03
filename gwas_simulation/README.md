@@ -28,7 +28,7 @@ make sure tabix, vcftools, plink2 are installed in your environment\
 1000 Genomes datasets can be found at ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/
 
 ```
-bash 1000genomes_haps.sh /path/to/tabix ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ALL.chr1.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz /path/to/vcftools /path/to/EUR.ids.txt /path/to/plink2 EUR.final EUR_AF
+bash 1000genomes_haps.sh /path/to/tabix ALL.chr1.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz /path/to/vcftools /path/to/EUR.ids.txt /path/to/plink2 EUR.final EUR_AF
 ```
 
 
